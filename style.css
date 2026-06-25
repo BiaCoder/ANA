@@ -1,0 +1,108 @@
+/* Configuração geral para limpar margens padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilização do fundo da tela (body) */
+body {
+    background-color: #f4f7f6; /* Um tom de cinza bem claro e confortável */
+    display: flex;
+    justify-content: center;   /* Centraliza o conteúdo na horizontal */
+    align-items: center;       /* Centraliza o conteúdo na vertical */
+    min-height: 100vh;         /* Garante que o fundo ocupe 100% da altura da tela */
+}
+
+/* Estilização da nossa caixa principal (container) */
+.container {
+    background-color: #ffffff; /* Fundo branco para contrastar */
+    padding: 30px;
+    border-radius: 8px;        /* Bordas levemente arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+    width: 100%;
+    max-width: 450px;          /* Largura máxima para não ficar esticado em telas grandes */
+}
+
+/* Título */
+h1 {
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Caixa que agrupa o Input e o Botão */
+.entrada-tarefa {
+    display: flex;
+    gap: 10px;                 /* Espaçamento entre o campo de texto e o botão */
+    margin-bottom: 20px;
+}
+
+/* Campo de digitação (Input) */
+#campo-tarefa {
+    flex: 1;                   /* Faz o input ocupar todo o espaço disponível restante */
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;             /* Remove aquela borda preta grossa ao clicar */
+}
+
+/* Botão Adicionar */
+#botao-adicionar {
+    background-color: #28a745; /* Cor verde para ação positiva */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;           /* Faz o cursor virar a "mãozinha" ao passar o mouse */
+    transition: background 0.2s; /* Deixa a mudança de cor suave */
+}
+
+/* Efeito ao passar o mouse por cima do botão (Hover) */
+#botao-adicionar:hover {
+    background-color: #218838; /* Escurece o verde levemente */
+}
+
+/* Estilização da lista onde as tarefas vão aparecer */
+ul {
+    list-style: none;          /* Remove as bolinhas padrão da lista */
+}
+/* Nova estilização para os itens da lista */
+ul li {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between; /* Joga o texto para a esquerda e o botão para a direita */
+    align-items: center;
+    border-left: 4px solid #28a745; /* Uma bordinha verde charmosa na esquerda */
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Quando a tarefa receber a classe .concluida via JavaScript */
+ul li.concluida {
+    text-decoration: line-through; /* Risca o texto */
+    color: #888888;                /* Deixa a cor cinza clarinha */
+    border-left-color: #cccccc;    /* Muda a bordinha para cinza */
+    background-color: #f1f1f1;
+}
+
+/* Estilo do botão de excluir (X) */
+.botao-deletar {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.botao-deletar:hover {
+    background-color: #bd2130; /* Vermelho mais escuro */
+}
