@@ -17,12 +17,13 @@ body {
 
 /* Estilização da nossa caixa principal (container) */
 .container {
-    background-color: #ffffff; /* Fundo branco para contrastar */
+    background-color: white;
     padding: 30px;
-    border-radius: 8px;        /* Bordas levemente arredondadas */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 450px;          /* Largura máxima para não ficar esticado em telas grandes */
+    max-width: 550px; /* Aumenta um pouquinho a largura para caber os detalhes */
+    margin: 30px auto;
 }
 
 /* Título */
@@ -35,8 +36,9 @@ h1 {
 /* Caixa que agrupa o Input e o Botão */
 .entrada-tarefa {
     display: flex;
-    gap: 10px;                 /* Espaçamento entre o campo de texto e o botão */
-    margin-bottom: 20px;
+    flex-direction: column; /* Faz os campos ficarem um embaixo do outro */
+    gap: 12px; /* Dá um espaço padrão e elegante entre as linhas */
+    width: 100%;
 }
 
 /* Campo de digitação (Input) */
@@ -105,4 +107,57 @@ ul li.concluida {
 
 .botao-deletar:hover {
     background-color: #bd2130; /* Vermelho mais escuro */
+}
+
+/* ESTILIZAÇÃO DOS NOVOS CAMPOS AVANÇADOS */
+
+/* Caixa de texto grande para os detalhes */
+#input-detalhes {
+    width: 100%;
+    height: 80px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    resize: none; /* Impede o usuário de quebrar o layout puxando a caixa */
+    box-sizing: border-box;
+}
+
+/* Container que deixa a Categoria e a Data lado a lado */
+.campos-extras {
+    display: flex;
+    gap: 15px; /* Espaço elegante entre os dois campos */
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Estilo do Menu Dropdown e do Calendário */
+#select-categoria, #input-data {
+    flex: 1; /* Faz os dois dividirem o espaço da tela igualmente */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+/* Destaque para o novo botão de adicionar */
+#botao-add-avancado {
+    width: 100%;
+    padding: 12px;
+    background-color: #2ecc71; /* Um verde bonito de sucesso/produtividade */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#botao-add-avancado:hover {
+    background-color: #27ae60; /* Escurece de leve quando passa o mouse */
 }
